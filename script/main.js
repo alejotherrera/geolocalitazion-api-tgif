@@ -13,20 +13,14 @@ const successCallBack = (position) => {
         center: {lat: latitude, lng: longitude},
         zoom: 15
     });
-    let div = document.createElement('div');
-    div.append("map");
-    let 
-
     const marker = new google.maps.Marker({
         position: {lat: latitude, lng: longitude},
         map: map,
-        title: 'Vous êtes ici'
+        title: 'Your position'
     });
     id = setInterval(() => {
         navigator.geolocation.getCurrentPosition(successCallBack);
     }, 1000);
-    console.log(id)
-    console.log(marker);
 }
 
 const errorCallBack = (error) => {

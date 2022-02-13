@@ -1,7 +1,6 @@
 // DOM
 
 //Geolocatio
-
 let id = null;
 
 const successCallBack = (position) => {
@@ -18,9 +17,6 @@ const successCallBack = (position) => {
         map: map,
         title: 'Your position'
     });
-    id = setInterval(() => {
-        navigator.geolocation.getCurrentPosition(successCallBack);
-    }, 1000);
 }
 
 const errorCallBack = (error) => {
